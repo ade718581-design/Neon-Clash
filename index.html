@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neon Clash</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="960" height="600"></canvas>
+
+  <div class="screen active" id="menu">
+    <h1 class="title">NEON <span>CLASH</span></h1>
+    <p class="tag">2D ARCADE SHOOTER</p>
+    <button class="btn" data-a="sp">Single Player</button>
+    <button class="btn red" data-a="mp">Multiplayer (1v1)</button>
+    <button class="btn" data-a="help">Instructions</button>
+    <button class="btn red" data-a="set">Settings</button>
+    <p class="foot">Local 1v1 &bull; Keyboard only</p>
+  </div>
+
+  <div class="screen" id="help">
+    <h2>INSTRUCTIONS</h2>
+    <div class="panel">
+      <p><b>Single Player</b> &ndash; Arrow keys move, <b>Space</b> shoots. Survive 5 waves of Mini, Speed, Shield and Boss Bots. Avoid red energy fields.</p>
+      <p><b>Player 1</b> (blue) &ndash; W A S D move, <b>F</b> shoots.</p>
+      <p><b>Player 2</b> (red) &ndash; Arrow keys move, <b>Enter</b> shoots.</p>
+      <p>Walls and barriers block bullets &ndash; hide behind them! Press <b>P</b> or <b>Esc</b> to pause. First to defeat the opponent wins.</p>
+    </div>
+    <button class="btn" data-a="back">Back</button>
+  </div>
+
+  <div class="screen" id="set">
+    <h2>SETTINGS</h2>
+    <button class="btn" id="bSnd" data-a="snd">Sound: On</button>
+    <button class="btn red" id="bArena" data-a="arena">Multiplayer Arena: Random</button>
+    <button class="btn" id="bDiff" data-a="diff">Difficulty: Normal</button>
+    <button class="btn red" data-a="back">Back</button>
+  </div>
+
+  <div class="screen" id="pauseS">
+    <h2>PAUSED</h2>
+    <button class="btn" data-a="resume">Resume</button>
+    <button class="btn red" data-a="restart">Restart</button>
+    <button class="btn" data-a="menu">Main Menu</button>
+  </div>
+
+  <div class="screen" id="end">
+    <h2 id="endT">GAME OVER</h2>
+    <p id="endS"></p>
+    <button class="btn" data-a="restart">Play Again</button>
+    <button class="btn red" data-a="menu">Main Menu</button>
+  </div>
+</div>
+<div id="bar">
+  <button class="btn small" id="bPause" data-a="pause">Pause</button>
+  <button class="btn small red" data-a="restart">Restart</button>
+  <button class="btn small" data-a="menu">Menu</button>
+  <span class="hint">P / Esc = pause</span>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
